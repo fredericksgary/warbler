@@ -83,7 +83,7 @@ module Warbler
           jar.files[apply_pathmaps(config, lockfile, :application)] = config.bundler[:lockfile].to_s
         end
         if config.bundler[:git_specs]
-          pathmap = "#{config.relative_gem_path}/bundler/gems/%p"
+          pathmap = "#{config.relative_gem_path}/gems/%p"
           pathmap.sub!(%r{^/+}, '')
           config.pathmaps.git = [pathmap]
           config.bundler[:git_specs].each do |spec|
