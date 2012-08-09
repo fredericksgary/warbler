@@ -43,7 +43,7 @@ module Warbler
         p.java_classes = ["%p"]
         p.application  = ["#{config.jar_name}/%p"]
         p.gemspecs     = ["specifications/%f"]
-        p.gems         = ["gems/%p"]
+        p.gems         = ["gems/%p", "bundler/gems/%p"]
         p
       end
 
